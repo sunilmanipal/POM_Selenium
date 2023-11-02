@@ -9,11 +9,12 @@ from POM_Login.LoginPage import Login
 # from testcases.conftest import BaseTest
 
 
-class Test_Login(BaseTest):
+@pytest.mark.usefixtures("setup")
+class Test_Login:
 
 
-    def test_login1(self, driver):
-        objlogin = Login(self)
+    def test_login1(self, setup):
+        objlogin = Login(setup)
         objlogin.login("Admin","admin123")
         print("not working")
 
