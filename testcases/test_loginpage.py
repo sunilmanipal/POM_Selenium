@@ -13,8 +13,9 @@ class Test_Login(BaseTest):
 
 
     def test_login1(self, driver):
-        objlogin = Login(self, driver)
+        objlogin = Login(self)
         objlogin.login("Admin","admin123")
+        print("not working")
 
     # def test_login_title(self):
     #     obj = Login()
